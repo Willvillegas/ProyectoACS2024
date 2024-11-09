@@ -56,7 +56,8 @@
 + tailwind
 
 ## Servicio de la nube a usar:
-+ Netlify
++ Vercel
++ Microsoft Azure (Base de datos)
 
 ## Requisitos previos
 ### ¿Git instalado?

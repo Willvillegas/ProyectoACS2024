@@ -1,5 +1,5 @@
 const mailer = require('nodemailer');
-
+require('dotenv').config();
 class EmailSender {
     constructor() {
         this.transporter = mailer.createTransport({
@@ -7,11 +7,11 @@ class EmailSender {
             port: 587,
             secure: false,
             auth: {
-                user: 'proyecto.ds.grupo5@hotmail.com',
-                pass: 'ProyectoDS2024'
+                user: process.env.EMAIL,
+                pass: process.env.EMAIL_PASSWORD
             }
         });
-        this._from = 'proyecto.ds.grupo5@hotmail.com';
+        this._from = process.env.EMAIL;
     }
 
     // Método para enviar correo de recuperación de contraseña

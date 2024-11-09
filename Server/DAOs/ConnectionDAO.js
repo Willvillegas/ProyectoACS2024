@@ -1,16 +1,18 @@
 //singleton class to manage the connection to the database to mssql
 const { text } = require('body-parser');
 const sql = require('mssql');
+require('dotenv').config();
 //export default
 class ConnectionDAO{
 
     constructor(){
         if (!ConnectionDAO.instance) {
+            
             const config = {
-                user: 'adminds',
-                password: 'ProyectoDS2024',
-                server: 'proyecto-ds-grupo5.database.windows.net',
-                database: 'ProyectoDSG5',
+                user: process.env.USER,
+                password: process.env.PASSWORD,
+                server: process.env.SERVER,
+                database: process.env.DATABASE,
                 pool: {
                     max: 10,
                     min: 0,

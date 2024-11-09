@@ -18,6 +18,9 @@ const actividadModel = require('./models/ActividadModel');
 const centroNotificacionesModel = require('./models/CentroNotificacionesModel');
 const bodyParser = require('body-parser');
 
+
+
+
 app.use(express.urlencoded({ extended: true }));
 app.use(cors(
     {
