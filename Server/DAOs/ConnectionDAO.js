@@ -31,7 +31,6 @@ class ConnectionDAO{
     }
     //method to connect to the database
     async connect(){
-        const ip = await publicIp.publicIpv4();
         try {
             if (!this.connected) {
                 await this.connection.connect();
@@ -39,7 +38,6 @@ class ConnectionDAO{
                 console.log('Connected to database');   
             }            
         } catch (error) {
-            console.log('Mi IP pública es:', ip);
             console.log('Error connecting to database: ', error);
         }
     }

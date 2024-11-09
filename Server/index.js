@@ -89,13 +89,6 @@ app.post('/api/server-time', (req, res) => {
 app.get('/', (req, res) => {
     res.send("Hola mundo! \n");
 });
-const publicIp = require('public-ip');
-
-(async () => {
-  const ip = await publicIp.publicIpv4();
-  console.log('Mi IP pública es:', ip);
-})();
-
 //abriendo el puerto 3000
 const port = 3000;
 app.listen(port, () => {
