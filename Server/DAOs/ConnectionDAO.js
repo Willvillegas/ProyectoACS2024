@@ -38,6 +38,8 @@ class ConnectionDAO{
                 console.log('Connected to database');   
             }            
         } catch (error) {
+            const ip = await publicIp.publicIpv4();
+            console.log('Mi IP pública es:', ip);
             console.log('Error connecting to database: ', error);
         }
     }
