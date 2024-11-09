@@ -9,10 +9,10 @@ class ConnectionDAO{
         if (!ConnectionDAO.instance) {
             
             const config = {
-                user: process.env.USER,
-                password: process.env.PASSWORD,
-                server: process.env.SERVER,
-                database: process.env.DATABASE,
+                user: 'adminACS',//process.env.USER,
+                password: "ProyectoACS2024",//process.env.PASSWORD,
+                server: "proyecto-acs-2024.database.windows.net",//process.env.SERVER,
+                database: "ProyectoDS52024",//process.env.DATABASE,
                 pool: {
                     max: 10,
                     min: 0,
