@@ -21,6 +21,7 @@ class ConnectionDAO{
                 options: {
                     encrypt: true,
                     trustServerCertificate: true,
+                    port: 1433 // <-- add your custom port here
                 },
             };
             this.connection = new sql.ConnectionPool(config);
